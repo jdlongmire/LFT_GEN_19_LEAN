@@ -38,8 +38,8 @@ where:
    - Admissible (will survive $\mathbb{L}$ filtering)
 
 **Example elements of $\mathcal{S}$:**
-- Empty graph: $G_0 = (\varnothing, \varnothing, \varnothing)$
-- Single proposition: $G_1 = (\{p, \neg p\}, \varnothing, \tau)$
+- Empty graph: $G_0 = (\emptyset, \emptyset, \emptyset)$
+- Single proposition: $G_1 = (\{p, \neg p\}, \emptyset, \tau)$
 - Contradiction: $G_{\bot} = (\{p, \neg p\}, \{(p,\neg p)\}, \tau)$
 - Tautology: $G_{\top} = (\{p, \neg p\}, \{(p,p), (\neg p,\neg p)\}, \tau)$
 
@@ -62,7 +62,7 @@ For any graph $G = (V, E, \tau) \in \mathcal{S}$, the logic operator $\mathbb{L}
 
 $$\mathbb{L}(G) = \begin{cases}
 G & \text{if } G \text{ satisfies conditions (L1)-(L3)} \\
-\varnothing & \text{otherwise}
+\emptyset & \text{otherwise}
 \end{cases}$$
 
 where the admissibility conditions are:
@@ -120,13 +120,13 @@ def exists_path(start, end, edges):
 **Properties of $\mathbb{L}$:**
 
 **Theorem 2.1.** The logic operator $\mathbb{L}$ satisfies:
-1. **Contractive:** $\mathbb{L}(G) \in \{G, \varnothing\} \subseteq \{G\}$
+1. **Contractive:** $\mathbb{L}(G) \in \{G, \emptyset\} \subseteq \{G\}$
 2. **Idempotent:** $\mathbb{L}(\mathbb{L}(G)) = \mathbb{L}(G)$
-3. **Decidable:** Checking $\mathbb{L}(G) \neq \varnothing$ is computable in $O(|V|^3)$ time
+3. **Decidable:** Checking $\mathbb{L}(G) \neq \emptyset$ is computable in $O(|V|^3)$ time
 
 *Proof sketch:*
-1. Contractive: By definition, $\mathbb{L}$ either returns $G$ or $\varnothing$
-2. Idempotent: If $\mathbb{L}(G) = G$, then $G$ satisfies (L1)-(L3), so $\mathbb{L}(G) = G$ again. If $\mathbb{L}(G) = \varnothing$, then $\mathbb{L}(\varnothing) = \varnothing$
+1. Contractive: By definition, $\mathbb{L}$ either returns $G$ or $\emptyset$
+2. Idempotent: If $\mathbb{L}(G) = G$, then $G$ satisfies (L1)-(L3), so $\mathbb{L}(G) = G$ again. If $\mathbb{L}(G) = \emptyset$, then $\mathbb{L}(\emptyset) = \emptyset$
 3. Decidable: Identity check is $O(|V|)$, path existence is $O(|V|^2)$ per vertex via BFS, excluded middle is $O(|V|)$
 
 ## 2.3 The Admissible Set $\mathcal{A}$
@@ -137,7 +137,7 @@ $$\mathcal{A} = \mathbb{L}(\mathcal{S}) = \{G \in \mathcal{S} : \mathbb{L}(G) = 
 
 This is the set of all graphs that survive logical filtering.
 
-**Remark 2.2.** The empty graph $\varnothing$ is technically admissible (vacuously satisfies all conditions) but represents "no information." The meaningful admissible configurations have $|V| \geq 2$.
+**Remark 2.2.** The empty graph $\emptyset$ is technically admissible (vacuously satisfies all conditions) but represents "no information." The meaningful admissible configurations have $|V| \geq 2$.
 
 **Example 2.1 (Admissibility Check).**
 Consider $G = (\{p, \neg p\}, \{(p,p), (\neg p,\neg p), (p,\neg p)\}, \tau)$:
@@ -145,7 +145,7 @@ Consider $G = (\{p, \neg p\}, \{(p,p), (\neg p,\neg p), (p,\neg p)\}, \tau)$:
 - L2 ✗: Path exists from $p$ to $\tau(p) = \neg p$
 - L3 ✓: Both $p$ and $\tau(p)$ are in $V$
 
-Result: $\mathbb{L}(G) = \varnothing$ (inadmissible due to contradiction)
+Result: $\mathbb{L}(G) = \emptyset$ (inadmissible due to contradiction)
 
 **Example 2.2 (Admissible Graph).**
 Consider $H = (\{p, \neg p, q, \neg q\}, \{(p,p), (\neg p,\neg p), (q,q), (\neg q,\neg q), (p,q)\}, \tau)$:

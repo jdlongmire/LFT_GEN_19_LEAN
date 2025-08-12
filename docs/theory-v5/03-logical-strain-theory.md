@@ -128,7 +128,7 @@ $$
 
 This uniquely determines the weights:
 
-$$\boxed{
+$$\mathbf{
 \begin{align}
 w_I &= \left(\frac{\xi}{\ell_0}\right)^2 \\
 w_N &= 1 \\

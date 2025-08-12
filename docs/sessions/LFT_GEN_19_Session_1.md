@@ -3862,7 +3862,7 @@ docs/theory-v5/02-core-identity.md
 **Claim.** The admissible state space is the fixed-point image of the logic-enforcement operator:
 
 $$
-\boxed{\mathcal{A} = \mathbb{L}(\mathcal{S})}
+\mathbf{\mathcal{A} = \mathbb{L}(\mathcal{S})}
 $$
 
 **Glossary.** See [00-glossary](./00-glossary.md).

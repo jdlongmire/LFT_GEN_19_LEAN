@@ -119,7 +119,7 @@ where A, B, C are constants with appropriate dimensions. □
 2. Normalization at ξ = ℓ₀
 
 This gives:
-$$\boxed{w_I = \left(\frac{\xi}{\ell_0}\right)^2, \quad w_N = 1, \quad w_E = \left(\frac{\ell_0}{\xi}\right)^2}$$
+$$\mathbf{w_I = \left(\frac{\xi}{\ell_0}\right)^2, \quad w_N = 1, \quad w_E = \left(\frac{\ell_0}{\xi}\right)^2}$$
 
 *Proof:*
 - From [w_I] = L², we need A = ℓ₀²
@@ -219,7 +219,7 @@ where Γ_env is the environmental scattering rate.
 
 **Theorem D5.5 (Decoherence Scaling).** The decoherence time scales as:
 
-$$\boxed{\tau_D = \tau_0 \left(\frac{\xi}{\ell_0}\right)^2 \frac{1}{\Gamma_{env}}}$$
+$$\mathbf{\tau_D = \tau_0 \left(\frac{\xi}{\ell_0}\right)^2 \frac{1}{\Gamma_{env}}}$$
 
 where τ₀ = σ_critical/ℏ is the fundamental timescale.
 

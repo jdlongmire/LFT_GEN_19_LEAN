@@ -20,7 +20,7 @@ $$\mathcal{S} = \{G = (V, E, \tau) : |V| < \infty\}$$
 
 $$\mathbb{L}(G) = \begin{cases}
 G & \text{if } G \text{ satisfies (L1), (L2), (L3)} \\
-\varnothing & \text{otherwise}
+\emptyset & \text{otherwise}
 \end{cases}$$
 
 where:
