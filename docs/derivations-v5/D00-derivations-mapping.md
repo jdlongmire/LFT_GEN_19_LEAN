@@ -2,248 +2,184 @@
 
 This document maps each derivation file to the theory sections it supports and proves.
 
-## Forward Mapping: Derivations → Theory Sections
+## Derivation Status Overview
 
-### D01-foundations.md
-**Status:** 📝 Placeholder
+| Derivation | Status | Priority | Core Result |
+|------------|--------|----------|-------------|
+| D01-foundations | 📝 Placeholder | Medium | Graph admissibility algorithm |
+| D02-complex-necessity | ✅ COMPLETE | - | **ℂ is unique scalar field (PUBLISHABLE)** |
+| D03-unitary-evolution | 📝 Placeholder | Medium-High | Coherence → unitarity, gauge emergence |
+| D04-born-rule-proof | 📝 Placeholder | HIGH | Path counting → \|ψ\|² |
+| D05-strain-timing-policy | 📝 Placeholder | HIGH | Scale invariance → weights |
+| D06-predictions | 📝 Placeholder | Medium | Experimental protocols |
 
-**Primary References:**
-- **Section 2** (Pre-Quantum Foundations)
-  - Definition 2.1: Syntactic Space 𝒮
-  - Definition 2.2: Logic Operator 𝕃
-  - Algorithm 2.1: Logic Filter implementation
-  - Definition 2.4: Logical Equivalence classes
+## D01-foundations.md
 
-**Secondary References:**
-- **Section 3.2** (Definition of Logical Strain)
-  - How strain applies to admissible graphs
-  - Initial formulation of v_I, v_N, v_E
+### Theory References
+| Section | Topics | Specific Items |
+|---------|--------|----------------|
+| **§2** (Primary) | Pre-Quantum Foundations | Def 2.1 (𝒮), Def 2.2 (𝕃), Algorithm 2.1, Def 2.4 (equivalence) |
+| **§3.2** (Secondary) | Logical Strain Definition | How strain applies to graphs, v_I, v_N, v_E formulation |
 
-**Must Prove:**
-- Theorem 2.1: 𝕃 properties (contractive, idempotent, decidable)
-- Complexity analysis O(|V|³)
-- Equivalence class construction algorithm
-- Graph admissibility checker implementation
+### Must Prove
+| Theorem/Result | Description | Complexity |
+|----------------|-------------|------------|
+| Theorem 2.1 | 𝕃 properties (contractive, idempotent, decidable) | Medium |
+| Complexity Analysis | O(\|V\|³) for admissibility checking | Low |
+| Equivalence Algorithm | Construction of 𝒜/∼ | Medium |
 
----
+## D02-complex-necessity.md ✅
 
-### D02-complex-necessity.md
-**Status:** ✅ COMPLETE (Publishable)
+### Theory References
+| Section | Topics | Specific Items |
+|---------|--------|----------------|
+| **§4.4** (Primary) | Why Complex Numbers | Theorem 4.1, Graph cycles, Rotation groups |
+| **§4.4.5** (Primary) | Physical Interpretation | i as orientation generator |
+| **§2.4** (Secondary) | Equivalence Classes | [G] notation and properties |
+| **§4.6** (Secondary) | Path Counting | Connection to Born rule |
 
-**Primary References:**
-- **Section 4** (From Graphs to Vector Spaces)
-  - Section 4.4: Why Complex Numbers?
-  - Theorem 4.1: Field Uniqueness
-  - Section 4.4.3: Graph Cycles and Rotation Groups
-  - Section 4.4.5: Physical Interpretation of i
+### Proves
+| Theorem | Result | Significance |
+|---------|--------|--------------|
+| Theorem D2.2 | ℝ cannot represent orientation | Excludes real QM |
+| Theorem D2.3 | ℍ violates independence | Excludes quaternionic QM |
+| Theorem D2.7 | ℂ is unique and necessary | **Core publishable result** |
 
-**Secondary References:**
-- **Section 2.4**: Logical Equivalence Classes [G]
-- **Section 4.6**: Path Counting and Born Rule
+## D03-unitary-evolution.md
 
-**Proves:**
-- Theorem 4.1: ℂ is the unique scalar field
-- Orientation-Composition requirements
-- Exclusion of ℝ, ℍ, finite fields
-- Physical meaning of imaginary unit
+### Theory References
+| Section | Topics | Specific Items |
+|---------|--------|----------------|
+| **§5.7** (Primary) | Coherence Preservation | Theorem 5.5 (Unitarity from Logic) |
+| **§5.4** (Primary) | Hamiltonian | Graph dynamics → Ĥ |
+| **§6.1** (Primary) | Action Minimization | Schrödinger equation emergence |
+| **§7.2-7.3** (Primary) | Gauge Fields | Local invariance, fundamental forces |
 
----
+### Must Prove
+| Result | Description | Priority |
+|--------|-------------|----------|
+| Wigner's theorem | Application to logical transformations | High |
+| Stone-von Neumann | Uniqueness of representation | Medium |
+| Z₂ → SU(2) | Gauge enhancement mechanism | High |
+| S₃ → SU(3) | 3-coloring → strong force | High |
 
-### D03-unitary-evolution.md
-**Status:** 📝 Placeholder
+## D04-born-rule-proof.md
 
-**Primary References:**
-- **Section 5** (Quantum Structure)
-  - Section 5.7: Dynamics from Coherence Preservation
-  - Theorem 5.5: Unitarity from Logic
-  - Section 5.4: The Hamiltonian from Graph Dynamics
+### Theory References
+| Section | Topics | Specific Items |
+|---------|--------|----------------|
+| **§4.6** (Primary) | Path Counting | Proposition 4.2, Logical paths |
+| **§6.2** (Primary) | Born Rule | Theorem 6.1 (uniqueness) |
+| **§4.6.1** (Secondary) | Configuration Paths | Amplitude calculation |
 
-- **Section 6** (Dynamics and Measurement)
-  - Section 6.1: Dynamics from Action Minimization
-  - Schrödinger equation emergence
+### Must Prove
+| Result | Description | Significance |
+|--------|-------------|--------------|
+| Path formalism | Complete counting mechanism | Novel approach |
+| n=2 uniqueness | Why P = \|ψ\|² not \|ψ\|ⁿ | Fundamental |
+| Independence → multiplication | P(A×B) = P(A)P(B) | Key requirement |
 
-- **Section 7** (Symmetries and Gauge Fields)
-  - Section 7.2: Local Gauge Invariance
-  - Section 7.3: Emergence of Fundamental Forces
+## D05-strain-timing-policy.md
 
-**Must Prove:**
-- Wigner's theorem application to logical transformations
-- Stone-von Neumann uniqueness
-- Z₂ → SU(2) enhancement mechanism
-- S₃ → SU(3) from 3-coloring
-- Gauge field emergence from local coherence
+### Theory References
+| Section | Topics | Specific Items |
+|---------|--------|----------------|
+| **§3.2** (Primary) | Strain Definition | D(ψ) = w_I v_I + w_N v_N + w_E v_E |
+| **§3** (Primary) | Weight Derivation | w_I : w_N : w_E ratios |
+| **§6.3** (Primary) | Coherence Capacity | σ_critical = N_dof × σ₀ |
+| **§6.5** (Primary) | Decoherence | Classical limit emergence |
 
----
+### Must Prove
+| Result | Formula/Description | Application |
+|--------|---------------------|-------------|
+| Scale invariance | w ratios from critical exponents | Weight values |
+| Decoherence time | τ_D = ℏ/⟨v_E⟩ × (σ_critical/D_total) | Testable |
+| Gradient flow | d\|ψ⟩/dτ = -∇D(ψ) | Measurement |
 
-### D04-born-rule-proof.md
-**Status:** 📝 Placeholder
+## D06-predictions.md
 
-**Primary References:**
-- **Section 4** (From Graphs to Vector Spaces)
-  - Section 4.6: Path Counting and Born Rule
-  - Proposition 4.2: Born Rule Uniqueness
-  - Section 4.6.1: Logical Paths in Configuration Space
+### Theory References
+| Section | Topics | Specific Items |
+|---------|--------|----------------|
+| **§3.5** | Strain Predictions | V = V₀ exp(-β v_E), τ_D formula |
+| **§6.8** | Beyond Standard QM | Critical experiments |
+| **§8** | Experimental Summary | Near/medium/long-term tests |
 
-- **Section 6** (Dynamics and Measurement)
-  - Section 6.2: The Born Rule Without Postulates
-  - Theorem 6.1: Born Rule Uniqueness
+### Must Include
+| Prediction Type | Specific Measurement | Deviation from QM |
+|-----------------|---------------------|-------------------|
+| Interference visibility | Modified double-slit | ~10⁻⁶ effect |
+| Decoherence scaling | τ_D vs system size | Linear in N_dof |
+| Strain accumulation | Near-threshold behavior | Sharp transition |
+| Null outcomes | High-strain dissolution | Novel prediction |
 
-**Must Prove:**
-- Complete path counting formalism
-- Why exactly n=2 in P(G) = |c_G|^n
-- Connection to (but not reliance on) Gleason's theorem
-- Independence requirement → multiplicative probability
-- Uniqueness of quadratic probability measure
+## Theory → Derivation Requirements
 
----
+### Section 2: Pre-Quantum Foundations
+| Claim | Required Proof | Derivation | Status |
+|-------|---------------|------------|---------|
+| 𝕃 is contractive | Mathematical proof | D01 | 📝 |
+| 𝕃 is idempotent | Mathematical proof | D01 | 📝 |
+| O(\|V\|³) complexity | Algorithm analysis | D01 | 📝 |
 
-### D05-strain-timing-policy.md
-**Status:** 📝 Placeholder
+### Section 3: Logical Strain
+| Claim | Required Proof | Derivation | Status |
+|-------|---------------|------------|---------|
+| Weights from first principles | Scale invariance | D05 | 📝 |
+| w_I : w_N : w_E = 1 : ln(ξ/ℓ₀) : (ξ/ℓ₀)² | Critical behavior | D05 | 📝 |
+| Testable predictions | Experimental protocols | D06 | 📝 |
 
-**Primary References:**
-- **Section 3** (Logical Strain Theory)
-  - Section 3.2: Definition of Logical Strain
-  - Weight derivation w_I : w_N : w_E = 1 : ln(ξ/ℓ₀) : (ξ/ℓ₀)²
-  - Section 3.3: Realization Probability
+### Section 4: Graphs to Vectors
+| Claim | Required Proof | Derivation | Status |
+|-------|---------------|------------|---------|
+| ℂ is unique (Theorem 4.1) | Complete exclusion proof | D02 | ✅ |
+| Born rule from paths (Prop 4.2) | Path counting uniqueness | D04 | 📝 |
+| Discrete → continuous | Graph automorphisms → U(1) | D02 | ✅ |
 
-- **Section 6** (Dynamics and Measurement)
-  - Definition 6.1: Coherence Capacity σ_critical = N_dof × σ₀
-  - Section 6.3.2: Outcome Selection Mechanism
-  - Section 6.5: Decoherence and Classical Limit
+### Section 5: Quantum Structure
+| Claim | Required Proof | Derivation | Status |
+|-------|---------------|------------|---------|
+| Unitarity from coherence | Wigner's theorem | D03 | 📝 |
+| [x̂,p̂] = iℏ | Translation generator | D03 | 📝 |
+| Ĥ from graphs | Connectivity → energy | D03 | 📝 |
 
-**Must Prove:**
-- Scale invariance at criticality → weight ratios
-- Critical exponents connection
-- Decoherence time formula: τ_D = ℏ/⟨v_E⟩ × (σ_critical/D_total)
-- Measurement timing from strain accumulation
-- Gradient flow dynamics: d|ψ⟩/dτ = -∇D(ψ)
+### Section 6: Dynamics & Measurement
+| Claim | Required Proof | Derivation | Status |
+|-------|---------------|------------|---------|
+| Born rule uniqueness | L1-L4 requirements | D04 | 📝 |
+| Gradient flow | Strain minimization | D05 | 📝 |
+| σ_critical = N_dof × σ₀ | Scaling argument | D05 | 📝 |
 
----
+### Section 7: Gauge Fields
+| Claim | Required Proof | Derivation | Status |
+|-------|---------------|------------|---------|
+| U(1)×SU(2)×SU(3) necessary | Minimal faithful reps | D03 | 📝 |
+| Three generations | 3-coloring theorem | D03 | 📝 |
+| Gauge = logical connector | Local coherence | D03 | 📝 |
 
-### D06-predictions.md
-**Status:** 📝 Placeholder
+## Lean Formalization Priority
 
-**Primary References:**
-- **Section 3** (Logical Strain Theory)
-  - Section 3.5: Predictions
-  - Interference visibility: V = V₀ exp(-β v_E)
-  - Decoherence time: τ_D
+| Priority | Theorem | From | Description |
+|----------|---------|------|-------------|
+| 1 | Theorem D2.7 | D02 | ℂ necessity (ready now) |
+| 2 | Graph admissibility | D01 | Algorithm implementation |
+| 3 | Theorem D2.2-D2.3 | D02 | ℝ, ℍ exclusion (ready now) |
+| 4 | Born uniqueness | D04 | When complete |
+| 5 | Gauge emergence | D03 | When complete |
 
-- **Section 6** (Dynamics and Measurement)
-  - Section 6.8: Predictions Beyond Standard QM
-  - Section 6.8.4: Critical Experiments
+## Publication Strategy
 
-- **Section 8** (Conclusion)
-  - Experimental Predictions summary
-  - Near/Medium/Long-term tests
+| Paper | Core Content | Status | Target Journal |
+|-------|-------------|--------|----------------|
+| Paper 1 | D02: Complex necessity | **Ready** | Foundations of Physics |
+| Paper 2 | D04+D05: Measurement | In progress | PRA or PRX Quantum |
+| Paper 3 | Full LFT framework | After D01-D06 | Reviews of Modern Physics |
 
-**Must Include:**
-- Concrete experimental protocols with parameters
-- Numerical predictions with error bars
-- Comparison table: LFT vs Standard QM predictions
-- "Smoking gun" experiment design
-- Feasibility analysis for current technology
+## Completion Checklist
 
----
-
-## Reverse Mapping: Theory Claims → Required Derivations
-
-### Section 2 (Pre-Quantum Foundations)
-| Claim | Required Derivation | Status |
-|-------|-------------------|---------|
-| 𝕃 is contractive, idempotent | D01 | 📝 |
-| O(|V|³) complexity | D01 | 📝 |
-| Equivalence classes well-defined | D01 | 📝 |
-
-### Section 3 (Logical Strain Theory)
-| Claim | Required Derivation | Status |
-|-------|-------------------|---------|
-| Weights from scale invariance | D05 | 📝 |
-| w_I : w_N : w_E = 1 : ln(ξ/ℓ₀) : (ξ/ℓ₀)² | D05 | 📝 |
-| Testable predictions | D06 | 📝 |
-
-### Section 4 (From Graphs to Vector Spaces)
-| Claim | Required Derivation | Status |
-|-------|-------------------|---------|
-| ℂ is unique (Theorem 4.1) | D02 | ✅ |
-| Born rule from paths (Prop 4.2) | D04 | 📝 |
-| Discrete → continuous bridge | D02 | ✅ |
-
-### Section 5 (Quantum Structure)
-| Claim | Required Derivation | Status |
-|-------|-------------------|---------|
-| Unitarity from coherence | D03 | 📝 |
-| [x̂,p̂] = iℏ derivation | D03 | 📝 |
-| Hamiltonian from graphs | D03 | 📝 |
-
-### Section 6 (Dynamics and Measurement)
-| Claim | Required Derivation | Status |
-|-------|-------------------|---------|
-| Born rule uniqueness | D04 | 📝 |
-| Gradient flow mechanism | D05 | 📝 |
-| σ_critical = N_dof × σ₀ | D05 | 📝 |
-| Measurement predictions | D06 | 📝 |
-
-### Section 7 (Symmetries and Gauge Fields)
-| Claim | Required Derivation | Status |
-|-------|-------------------|---------|
-| U(1)×SU(2)×SU(3) emergence | D03 | 📝 |
-| Three generations from 3-coloring | D03 | 📝 |
-| Gauge fields as logical connectors | D03 | 📝 |
-
----
-
-## Priority Order for Completion
-
-1. **D04-born-rule-proof.md** [HIGH]
-   - Second most novel result after complex necessity
-   - Central to quantum mechanics
-   - Path counting approach is unique
-
-2. **D05-strain-timing-policy.md** [HIGH]
-   - Makes predictions concrete and testable
-   - Derives measurement mechanism
-   - Critical for experimental validation
-
-3. **D03-unitary-evolution.md** [MEDIUM-HIGH]
-   - Includes gauge field emergence
-   - Completes dynamics picture
-   - Contains Standard Model connection
-
-4. **D01-foundations.md** [MEDIUM]
-   - Algorithmic details
-   - Foundation for Lean formalization
-   - More technical than conceptual
-
-5. **D06-predictions.md** [MEDIUM]
-   - Experimental protocols
-   - Requires D05 completion first
-   - Critical for experimental physicists
-
----
-
-## Lean Formalization Targets
-
-From completed and pending derivations, prioritize formalizing:
-
-1. **From D02** (Complete):
-   - Theorem D2.2: Real exclusion
-   - Theorem D2.3: Quaternion exclusion
-   - Theorem D2.7: Complex necessity
-
-2. **From D01** (When complete):
-   - Graph admissibility checker
-   - Logic operator algorithm
-
-3. **From D04** (When complete):
-   - Born rule uniqueness
-   - Path counting formalism
-
----
-
-## Notes
-
-- **D02 is publishable** as a standalone paper on complex necessity
-- D04 and D05 together would make another strong paper on measurement
-- The complete set D01-D06 supports the full LFT framework
-- Each derivation should be self-contained but reference theory sections for context
+- [x] D02: Complex necessity proof
+- [ ] D04: Born rule from path counting
+- [ ] D05: Strain weights and dynamics  
+- [ ] D03: Unitarity and gauge fields
+- [ ] D01: Algorithmic foundations
+- [ ] D06: Experimental predictions
