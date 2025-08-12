@@ -120,7 +120,7 @@ For different systems:
 
 ### Scale Invariance at Criticality
 
-At the quantum-classical transition point where $D \approx \sigma_{\text{critical}}$, the system lacks a characteristic scale—a hallmark of critical phenomena. This manifests as scale invariance under the transformation $\xi \to \lambda\xi$:
+At the quantum-classical transition point where $D \approx \sigma_{critical}$, the system lacks a characteristic scale—a hallmark of critical phenomena. This manifests as scale invariance under the transformation $\xi \to \lambda\xi$:
 
 $$
 D(\lambda \cdot \psi) = D(\psi) \quad \text{at criticality}
@@ -168,7 +168,7 @@ $$
 
 where:
 - $\beta = 1/T_{\text{logical}}$ is the inverse logical temperature
-- $T_{\text{logical}} = \sigma_{\text{critical}}/k_{\text{logic}}$ with $k_{\text{logic}}$ the logical Boltzmann constant
+- $T_{\text{logical}} = \sigma_{critical}/k_{\text{logic}}$ with $k_{\text{logic}}$ the logical Boltzmann constant
 - $Z = \sum_{\psi \in \mathcal{A}} \exp(-\beta D(\psi))$ is the partition function
 
 ### Properties
@@ -183,7 +183,7 @@ where:
 
 The Born rule emerges from the path-counting measure established in Section 4:
 
-**By Proposition 4.1:** Given complex amplitudes $c_G$ arising from oriented path counting, the unique probability measure satisfying positivity, interference, normalization, and factorization is:
+**By Proposition 4.1 (Section 4):** Given complex amplitudes $c_G$ arising from oriented path counting, the unique probability measure satisfying positivity, interference, normalization, and factorization is:
 
 $$
 P(G|\psi) = |c_G|^2
@@ -196,18 +196,18 @@ The strain functional determines **when** measurement occurs (threshold crossing
 A measurement event is triggered when total strain exceeds the system's coherence capacity:
 
 $$
-D(\psi) > \sigma_{\text{critical}} \quad \Rightarrow \quad \text{measurement/collapse}
+D(\psi) > \sigma_{critical} \quad \Rightarrow \quad \text{measurement/collapse}
 $$
 
-**Nature of $\sigma_{\text{critical}}$:**
+**Nature of $\sigma_{critical}$:**
 - Empirical "hardware constant" specific to physical implementation
 - Depends on system type (atoms, photons, qubits)
 - Analogous to critical temperature in phase transitions
 - Measurable via decoherence experiments
 
-**Universality Hypothesis:** For systems of the same "logical type" (e.g., all spin-1/2 particles), $\sigma_{\text{critical}}/\ell_0^2$ should be universal, differing only by geometric factors.
+**Universality Hypothesis:** For systems of the same "logical type" (e.g., all spin-1/2 particles), $\sigma_{critical}/\ell_0^2$ should be universal, differing only by geometric factors.
 
-Post-measurement, the system collapses to an eigenstate with $D < \sigma_{\text{critical}}$.
+Post-measurement, the system collapses to an eigenstate with $D < \sigma_{critical}$.
 
 ## Dynamics and Evolution
 
@@ -229,7 +229,7 @@ $$
 
 The decay operator is constructed from the strain gradient:
 $$
-\hat{\Gamma}_{\text{strain}} = \frac{1}{2\sigma_{\text{critical}}}\sum_k \frac{\partial D}{\partial |k\rangle\langle k|}|k\rangle\langle k|
+\hat{\Gamma}_{\text{strain}} = \frac{1}{2\sigma_{critical}}\sum_k \frac{\partial D}{\partial |k\rangle\langle k|}|k\rangle\langle k|
 $$
 
 This preserves probability normalization while incorporating strain effects.
@@ -239,14 +239,14 @@ This preserves probability normalization while incorporating strain effects.
 The characteristic decoherence time depends on strain accumulation rate:
 
 $$
-\tau_D = \frac{\sigma_{\text{critical}}}{\langle\dot{D}\rangle} = \frac{\sigma_{\text{critical}}}{w_E \Gamma}
+\tau_D = \frac{\sigma_{critical}}{\langle\dot{D}\rangle} = \frac{\sigma_{critical}}{w_E \Gamma}
 $$
 
 where $\Gamma$ is the environmental coupling rate.
 
 Using our derived weights:
 $$
-\tau_D = \sigma_{\text{critical}} \cdot \left(\frac{\xi}{\ell_0}\right)^2 \cdot \frac{1}{\Gamma}
+\tau_D = \sigma_{critical} \cdot \left(\frac{\xi}{\ell_0}\right)^2 \cdot \frac{1}{\Gamma}
 $$
 
 This predicts:
@@ -258,7 +258,7 @@ This predicts:
 - Molecular size: $\xi \sim 10^{-9}$ m
 - If $\ell_0 \sim 10^{-35}$ m, then $(\xi/\ell_0)^2 \sim 10^{52}$
 - Predicts coherence maintained for typical experimental conditions
-- Decoherence when air molecules create $\Gamma > \sigma_{\text{critical}}/10^{52}$
+- Decoherence when air molecules create $\Gamma > \sigma_{critical}/10^{52}$
 
 ## Experimental Predictions and Protocols
 
@@ -277,10 +277,10 @@ This predicts:
    Measurable across different quantum platforms.
 
 3. **Critical Behavior at Threshold:**
-   Near $D = \sigma_{\text{critical}}$, expect:
+   Near $D = \sigma_{critical}$, expect:
    - Power-law correlations: $\langle\psi(x)\psi(x')\rangle \sim |x-x'|^{-\eta}$
    - Universal scaling exponents
-   - Critical slowing down: $\tau_{\text{relax}} \sim |D - \sigma_{\text{critical}}|^{-\nu}$
+   - Critical slowing down: $\tau_{\text{relax}} \sim |D - \sigma_{critical}|^{-\nu}$
 
 ### Measuring the Fundamental Parameters
 
@@ -296,7 +296,7 @@ This predicts:
 
 3. **Plot** $\log(\tau_D \cdot \Gamma)$ vs $\log(\xi)$:
    - Slope should be exactly 2
-   - Intercept gives $\log(\sigma_{\text{critical}}/\ell_0^2)$
+   - Intercept gives $\log(\sigma_{critical}/\ell_0^2)$
 
 4. **Verify universality:** Check that $\ell_0$ is the same across all platforms
 
@@ -309,7 +309,7 @@ LFT makes specific predictions that differ from environmental decoherence models
 | Aspect | Standard Decoherence | LFT Prediction |
 |--------|---------------------|----------------|
 | Scaling | $\tau_D \propto 1/(\Gamma \cdot \text{size})$ | $\tau_D \propto \xi^2/(\Gamma \cdot \ell_0^2)$ |
-| Threshold | None | Sharp transition at $D = \sigma_{\text{critical}}$ |
+| Threshold | None | Sharp transition at $D = \sigma_{critical}$ |
 | Universality | System-dependent | Universal $\ell_0$ across systems |
 | Critical behavior | Absent | Power laws near threshold |
 
@@ -324,7 +324,7 @@ LFT makes specific predictions that differ from environmental decoherence models
 ### Thermodynamic Analogy
 - $D(\psi)$ = logical free energy
 - $\beta^{-1} = T_{\text{logical}}$ = logical temperature  
-- $\sigma_{\text{critical}}$ = phase transition point
+- $\sigma_{critical}$ = phase transition point
 - Critical behavior = second-order phase transition
 
 ### Geometric Picture
@@ -338,7 +338,7 @@ LFT makes specific predictions that differ from environmental decoherence models
 ### Why Measurement Appears Random
 Randomness is **epistemic**, not fundamental:
 - Multiple outcomes minimize strain equally
-- Selection follows Born weights (Proposition 4.1)
+- Selection follows Born weights (Proposition 4.1, Section 4)
 - Observer lacks complete logical specification
 - Deterministic but computationally intractable
 
@@ -362,10 +362,10 @@ Logical strain bridges **possibility** (what can exist) and **actuality** (what 
 
 1. **Strain components** have clear logical meanings and physical dimensions
 2. **Weights derived**, not postulated, from scale invariance at criticality
-3. **Born rule** emerges from path counting (Proposition 4.1), not strain
+3. **Born rule** emerges from path counting (Proposition 4.1, Section 4), not strain
 4. **Measurement** triggered by strain threshold crossing
 5. **Decoherence** rates predicted quantitatively from fundamental parameters
-6. **Only two empirical constants:** $\sigma_{\text{critical}}$ (system-specific) and $\ell_0$ (universal)
+6. **Only two empirical constants:** $\sigma_{critical}$ (system-specific) and $\ell_0$ (universal)
 7. **Testable predictions** distinguish LFT from standard quantum mechanics
 
 The fundamental length $\ell_0 \sim 10^{-35}$ m emerges as the minimal logical distance, likely connected to the Planck scale where spacetime itself becomes discrete. The correlation length $\xi$ characterizes each system's coherent scale. Together, their ratio $\xi/\ell_0$ determines whether a system behaves quantum mechanically ($\xi \gg \ell_0$) or classically ($\xi \ll \ell_0$).
