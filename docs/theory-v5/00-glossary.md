@@ -1,4 +1,3 @@
-# 00-glossary.md
 ## Glossary
 
 **3FLL (Three Fundamental Laws of Logic)**  
@@ -6,23 +5,26 @@ Identity: $A = A$.
 Non-Contradiction: $\neg(A \land \neg A)$.  
 Excluded Middle: $A \lor \neg A$.
 
-**$\Omega$**  
-Observable physical reality; the set of logically admissible, physically realized states.
+**$\mathcal{S}$**  
+Formally describable information field (syntactic space) containing all definable information patterns.
 
-**$\mathcal{L}$**  
-Logical operator enforcing 3FLL on the information field $S$.
+**$\mathbb{L}$**  
+Logic-enforcement operator applying the 3FLL to $\mathcal{S}$, producing only logically coherent configurations.
 
-**$S$ (Information States)**  
-Configurations of epistemic knowledge; possible descriptions of the world before logical filtering.
+**$\mathcal{A} = \mathbb{L}(\mathcal{S})$**  
+The admissible set: all logically permissible configurations after applying $\mathbb{L}$ to $\mathcal{S}$.  
+(Formerly denoted $\Omega$ in earlier drafts; symbol changed to avoid probability-space collisions.)
 
-**Logical Strain $D$**  
-Functional quantifying logical tension in incomplete information systems:  
-$$ D(G) = w_I v_I + w_N v_N + w_E v_E. $$
+**Logical Strain $D(\psi)$**  
+Functional quantifying realization cost for an admissible configuration $\psi$:
+$$
+D(\psi) = w_I v_I + w_N v_N + w_E v_E
+$$
 
-**$v_I$** – Internal contradiction strain.  
-**$v_N$** – Non-classicality (entropic) strain.  
-**$v_E$** – External misfit strain.
+- **$v_I$** – Internal contradiction strain (proximity of contradictory paths).  
+- **$v_N$** – Non-classicality (entropic) strain.  
+- **$v_E$** – External misfit strain.
 
 **Principle of Least Logical Strain**  
-Hypothesized dynamical principle: physical laws emerge by minimizing $D$ over admissible evolutions.
+Hypothesized dynamical principle: realized physical evolution minimizes $D(\psi)$ over admissible trajectories.
 
