@@ -28,7 +28,7 @@ Your branch is up to date with 'origin/main'
 
 ```bash
 git add path/to/file.txt
-git commit -m "Describe the change to file.txt"
+git commit -m "Updated file"
 git push origin main
 ```
 
