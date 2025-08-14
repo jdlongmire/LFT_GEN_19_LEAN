@@ -1,21 +1,8 @@
 ## Here’s the quick sequence to check if your **local** and **remote** repos are in sync:
-
-```bash
-# 1. Go to your repo folder
-cd /path/to/your/repo
-
-# 2. Make sure you’re on the right branch
-git branch
-
-# 3. Get the latest info from remote
-git fetch origin
-
-# 4. Compare your branch with remote
-git status
-git log --oneline origin/main..HEAD   # commits you have locally but not on remote
-git log --oneline HEAD..origin/main   # commits remote has but you don’t
 ```
-
+git fetch origin
+git status
+```
 If `git status` says:
 
 ```
@@ -24,7 +11,7 @@ Your branch is up to date with 'origin/main'
 
 —then you’re synced.
 
-##To commit a single file:
+To commit a single file:
 
 ```bash
 git add path/to/file.txt
