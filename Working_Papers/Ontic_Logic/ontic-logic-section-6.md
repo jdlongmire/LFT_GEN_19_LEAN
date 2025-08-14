@@ -350,31 +350,3 @@ Quantum mechanics isn't one framework among alternatives—it's what necessarily
 The "weirdness" of quantum mechanics isn't weird at all—it's the elegant solution to maintaining Identity, Non-Contradiction, and Excluded Middle at all scales. Classical physics is the weird idea, full of contradictions we ignored because it matched limited intuition.
 
 Understanding quantum mechanics as emerging from the 3FLL dissolves its mysteries. Superposition, measurement, entanglement—all become not just sensible but inevitable. The universe is quantum because the three fundamental laws demand it. No other possibility exists.
-
-### The Profound Economy
-
-Consider what emerges from just three laws:
-
-**From Identity alone**:
-- Persistence of quantum states
-- Conservation in quantum processes  
-- Quantum memory and information
-
-**From Non-Contradiction alone**:
-- Uncertainty relations
-- No-cloning theorem
-- Quantum speed limits
-
-**From Excluded Middle alone**:
-- Definite measurement outcomes
-- Discrete quantum numbers
-- Eigenvalue structure
-
-**From all three together**:
-- Complete quantum mechanics
-- All interpretive principles
-- Every quantum phenomenon
-
-This is nature's ultimate economy: the most complex theory (quantum mechanics) emerging from the simplest foundation (the 3FLL). Three laws become infinite quantum richness.
-
-This is the deepest beauty: the entire quantum framework, with all its richness and complexity, emerges from just three logical principles. Maximum quantum complexity from the minimum logical foundation—the 3FLL generating the quantum world.
