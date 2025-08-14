@@ -252,6 +252,4 @@ The Logical Resolution Model integrates the Three Fundamental Laws of Logic dire
 [38] Keldysh, L. V. (1964). *Diagram technique for nonequilibrium processes*. Zh. Eksp. Teor. Fiz., 47, 1515–1527.  
 [39] Feynman, R. P., & Vernon, F. L. (1963). *The theory of a general quantum system interacting with a linear dissipative system*. Ann. Phys., 24(1), 118–173.  
 [40] Breuer, H.-P., & Petruccione, F. (2002). *The Theory of Open Quantum Systems*. Oxford University Press.  
-[41] Misra, B., & Sudarshan, E. C. G. (1977). *The Zeno's paradox in quantum theory*. J. Math. Phys., 18(4), 756–763.
-[40] Breuer, H.-P., & Petruccione, F. (2002). *The Theory of Open Quantum Systems*. Oxford University Press.  
 [41] Misra, B., & Sudarshan, E. C. G. (1977). *The Zeno’s paradox in quantum theory*. J. Math. Phys., 18(4), 756–763.  
