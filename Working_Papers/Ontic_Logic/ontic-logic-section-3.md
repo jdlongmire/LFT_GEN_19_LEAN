@@ -115,8 +115,6 @@ These aren't chosen from a continuum but are the unique values that emerge when 
 
 ## C. Why Only One Universe Is Possible
 
-## C. Why Only One Universe Is Possible
-
 ### Multiverse as Logical Impossibility
 
 The multiverse hypothesis fails when tested against the 3FLL:
