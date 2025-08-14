@@ -1,92 +1,98 @@
-# Logic Field Theory: Deriving Quantum Mechanics from the Three Fundamental Laws of Logic
+# Logic Field Theory
 
-**James D. Longmire**
+**Deriving Quantum Mechanics from the Three Fundamental Laws of Logic**
 
-Northrop Grumman Fellow (unaffiliated research)
-
-ORCID: 0009-0009-1383-7698
-
-Zenodo: [https://zenodo.org/uploads/16788881](https://zenodo.org/uploads/16788881)
-
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16788881.svg)](https://doi.org/10.5281/zenodo.16788881)
+[![Theory: CC BY-NC-SA 4.0](https://img.shields.io/badge/Theory-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+[![Code: MIT](https://img.shields.io/badge/Code-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 ## Overview
 
-Logic Field Theory (LFT) is a research framework that derives the mathematical formalism of quantum mechanics from the **Three Fundamental Laws of Logic** (Identity, Non-Contradiction, Excluded Middle) without presupposing physical postulates. This project (**GEN\_19**) refines the theoretical foundation, develops formal derivations, and prepares the framework for publication and formal verification.
+Logic Field Theory (LFT) derives the complete mathematical formalism of quantum mechanics and the Standard Model from the Three Fundamental Laws of Logic (Identity, Non-Contradiction, Excluded Middle) without assuming physical postulates. All core derivations are formally verified in Lean 4.
+
+## Key Results
+
+- **Quantum mechanics emerges necessarily** from logical consistency
+- **Complex numbers required** (not real or quaternionic)
+- **Standard Model gauge group U(1)×SU(2)×SU(3)** uniquely determined
+- **Exactly 3 fermion generations** from mathematical necessity
+- **Born rule derived** (not postulated)
 
 ## Repository Structure
 
 ```
-├── docs
-│   ├── theory-v5/           # Narrative, paper-style presentation
-│   ├── derivations-v5/      # Detailed mathematical derivations and proofs
-│   ├── position-papers/     # Historical versions & published PDFs
-│   └── sessions/            # Session-specific working notes
+Logic-Field-Theory/
+├── LFT_GEN_19_LEAN/         # Lean 4 implementation [COMPLETE]
+│   ├── LFT/Core/            # Verified proofs (D01-D05)
+│   └── docs/predictions/    # Experimental tests (D06)
 │
-├── planning/                # Recaps, roadmaps, and planning documents
-├── lean-map/                # Map from theory components to Lean formalization
-├── figures/                 # Diagrams, charts, and visual aids
+├── docs/
+│   ├── theory-v5/           # Theory exposition (8 chapters)
+│   ├── derivations-v5/      # Mathematical proofs (D00-D06)
+│   ├── position-papers/     # Published papers & preprints
+│   └── sessions/            # Development notes
+│
+├── planning/                # Research roadmap
+├── figures/                 # Diagrams and visualizations
+└── lean-map/               # Theory-to-Lean mapping
 ```
-
-## Entry Points
-
-* **Theory Narrative:** `docs/theory-v5/`
-* **Formal Derivations:** `docs/derivations-v5/`
-* **Historical Papers:** `docs/position-papers/`
-* **Session Notes:** `docs/sessions/`
-* **Planning Docs:** `planning/`
 
 ## Current Status
 
-* Theory narrative structure complete.
-* Derivation stubs ready for content migration.
-* Historical PDFs archived for reference.
-* Repo structure finalized and flattened for clean navigation.
+✅ **Theory Complete**: All derivations finalized  
+✅ **Lean Verified**: Core modules D01-D05 formally proven  
+✅ **Predictions Ready**: Experimental tests specified (D06)  
+🔬 **Awaiting Experiments**: Decoherence scaling test will be decisive
 
-## Next Steps
+## Quick Links
 
-1. Populate `theory-v5/` with merged prose from position paper and session notes.
-2. Transfer full derivations into `derivations-v5/`.
-3. Add diagrams and flowcharts to `figures/`.
-4. Begin Lean 4 mapping in `lean-map/` after theory lock.
+- **[Lean Implementation](LFT_GEN_19_LEAN/)** - Formal proofs in Lean 4
+- **[Theory Overview](docs/theory-v5/)** - Complete exposition
+- **[Mathematical Derivations](docs/derivations-v5/)** - Detailed proofs
+- **[Experimental Predictions](docs/predictions/)** - Testable outcomes
 
-## Licensing
+## Critical Experiment
 
-This project uses a dual licensing approach:
+The theory makes a decisive prediction: decoherence time scales as τ_D ∝ (ξ/ℓ₀)² (positive slope) versus standard QM's τ_D ∝ 1/size (negative slope). This opposite behavior enables definitive experimental validation.
 
-**Theory Paper**
-*Logic Field Theory: Deriving Quantum Mechanics from the Three Fundamental Laws of Logic* © 2025 by James D. Longmire is licensed under CC BY-NC-SA 4.0
+## Publications
 
-This means you can:
+- Zenodo Archive: [10.5281/zenodo.16788881](https://doi.org/10.5281/zenodo.16788881)
+- arXiv Preprint: [forthcoming]
 
-* ✅ Share and adapt the theory with attribution
-* ✅ Use for non-commercial research and education
-* ✅ Build upon the work if you share under the same license
-* ✅ Translate and create derivative works
+## Author
 
-Restrictions:
-
-* ❌ Commercial use requires permission
-* ❌ Must give appropriate credit
-* ❌ Must share adaptations under CC BY-NC-SA 4.0
-
-**Lean Code**
-All Lean formalizations in this repository are licensed under the MIT License for maximum reusability in formal verification projects.
+**James D. Longmire**  
+Northrop Grumman Fellow (independent research)  
+Email: longmire.jd@gmail.com  
+ORCID: [0009-0009-1383-7698](https://orcid.org/0009-0009-1383-7698)
 
 ## Contributing
 
-We are looking for collaborators interested in:
+Seeking collaborators in:
+- Experimental quantum physics (molecular interferometry)
+- Formal verification (Lean 4)
+- Quantum foundations
 
-* Lean 4 theorem proving and formal verification
-* Quantum foundations and interpretations
-* Graph theory and information theory
-* Experimental quantum physics (for testing predictions)
+## License
 
-By contributing to this repository, you agree that your contributions to the Lean code will be licensed under MIT, while contributions to the theory documentation will be licensed under CC BY-NC-SA 4.0.
+- **Theory & Documentation**: CC BY-NC-SA 4.0
+- **Code**: MIT License
+
+See [LICENSE](LICENSE) for details.
+
+## Citation
+
+```bibtex
+@article{longmire2025lft,
+  author = {Longmire, James D.},
+  title = {Logic Field Theory: Deriving Quantum Mechanics from First Principles},
+  year = {2025},
+  doi = {10.5281/zenodo.16788881},
+  url = {https://github.com/jdlongmire/Logic-Field-Theory}
+}
+```
 
 ---
 
-**Contact:** James D. Longmire – Principal Investigator
-📧 [longmire.jd@gmail.com](mailto:longmire.jd@gmail.com)
+*For detailed implementation, see [LFT_GEN_19_LEAN](LFT_GEN_19_LEAN/README.md)*

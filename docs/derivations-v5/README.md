@@ -1,120 +1,161 @@
-# Derivations v5 - Mathematical Proofs for Logic Field Theory
+# Logic Field Theory (LFT)
 
-This directory contains the complete mathematical derivations supporting Logic Field Theory (LFT). Each file provides rigorous proofs for claims made in the theory documents.
+**Deriving Quantum Field Theory from the Three Fundamental Laws of Logic**
 
-## 📊 Status Overview
+[![Lean 4](https://img.shields.io/badge/Lean-4.21.0-blue)](https://github.com/leanprover/lean4)
+[![License: MIT](https://img.shields.io/badge/Code-MIT-green.svg)](LICENSE)
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/Theory-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE)
 
-| Derivation | File | Status | Lean Implementation | Priority |
-|------------|------|--------|---------------------|----------|
-| Mapping & Overview | [D00-derivations-mapping.md](./D00-derivations-mapping.md) | ✅ Complete | - | - |
-| Foundations & Algorithms | [D01-foundations.md](./D01-foundations.md) | ✅ Complete | ✅ `D01_Admissibility.lean` | ⭐⭐⭐ |
-| Complex Necessity | [D02-complex-necessity.md](./D02-complex-necessity.md) | ✅ Complete | ✅ `D02_ComplexNecessity.lean` | ⭐⭐⭐ |
-| Unitary Evolution | [D03-unitary-evolution.md](./D03-unitary-evolution.md) | ✅ Complete | 🔲 TODO | ⭐⭐ |
-| Born Rule Proof | [D04-born-rule-proof.md](./D04-born-rule-proof.md) | ✅ Complete | 🔲 TODO | ⭐⭐⭐ |
-| Strain Weights | [D05-strain-timing-policy.md](./D05-strain-timing-policy.md) | ✅ Complete | 🔲 TODO | ⭐ |
-| Predictions | [D06-predictions.md](./D06-predictions.md) | ✅ Complete | 🔲 TODO | ⭐⭐ |
+## Overview
 
-## 🎯 Core Results
+This repository contains the complete formal derivation proving that quantum field theory and the Standard Model emerge necessarily from the Three Fundamental Laws of Logic (Identity, Non-Contradiction, Excluded Middle). All core proofs are formally verified in Lean 4.
 
-### D01: Algorithmic Foundations ✅
-- **Key Result:** O(|V|³) complexity for admissibility checking
-- **Significance:** Computational implementation of 𝒜 = ℒ(𝒮)
-- **Lean Status:** Fully implemented and tested
+## Key Results
 
-### D02: Complex Necessity ✅ **(PUBLISHABLE)**
-- **Key Result:** ℂ is the unique scalar field for quantum mechanics
-- **Significance:** Proves complex numbers are logically necessary, not chosen
-- **Lean Status:** Implemented with all tests passing
+We prove that quantum mechanics is not a choice among many possible theories, but the unique mathematical structure consistent with logical coherence:
 
-### D03: Unitary Evolution ✅
-- **Key Result:** Unitarity from coherence preservation
-- **Significance:** Derives U(1)×SU(2)×SU(3) gauge groups from logic
+- **Complex numbers are necessary** (not real or quaternionic)
+- **U(1)×SU(2)×SU(3) gauge structure is unique** (Standard Model)
+- **Exactly 3 fermion generations** (not 2 or 4)
+- **Born rule P = |ψ|² is derived** (not postulated)
+- **Measurement problem solved** via scale invariance
 
-### D04: Born Rule ✅
-- **Key Result:** P = |ψ|² is the unique probability measure
-- **Significance:** No circular reasoning - derived from path counting
+## Implementation Status
 
-### D05: Strain Weights ✅
-- **Key Result:** w_I : w_N : w_E = (ξ/ℓ₀)² : 1 : (ℓ₀/ξ)²
-- **Significance:** Weights determined by scale invariance, not free parameters
+| Module | File | Status | Key Result |
+|--------|------|--------|------------|
+| **D01** | [Core/D01_Admissibility.lean](LFT/Core/D01_Admissibility.lean) | ✅ Complete | 𝒜 = ℒ(𝒮), O(V³) complexity |
+| **D02** | [Core/D02_ComplexNecessity.lean](LFT/Core/D02_ComplexNecessity.lean) | ✅ Complete | ℂ required for QM |
+| **D03** | [Core/D03_UnitaryEvolution.lean](LFT/Core/D03_UnitaryEvolution.lean) | ✅ Complete | U(1)×SU(2)×SU(3), 3 generations |
+| **D04** | [Core/D04_BornRule.lean](LFT/Core/D04_BornRule.lean) | ✅ Complete | P = \|ψ\|² uniquely |
+| **D05** | [Core/D05_StrainWeights.lean](LFT/Core/D05_StrainWeights.lean) | ✅ Complete | Scale invariance weights |
+| **D06** | [docs/predictions/D06_predictions.md](docs/predictions/D06_predictions.md) | ✅ Complete | Experimental tests |
 
-### D06: Experimental Predictions ✅
-- **Key Result:** 10⁻⁶ deviations in interference visibility
-- **Significance:** Concrete, testable predictions distinguishing LFT from standard QM
+## The Derivation Chain
 
-## 🔗 Connection to Theory
+```
+Three Fundamental Laws of Logic
+            ↓
+    Admissible Graphs [D01]
+            ↓
+    Complex Structure [D02]
+            ↓
+    Gauge Groups & Generations [D03]
+            ↓
+    Born Probability Rule [D04]
+            ↓
+    Measurement Dynamics [D05]
+            ↓
+    Testable Predictions [D06]
+```
 
-Each derivation file proves specific claims from the theory documents in `../theory-v5/`:
+## Repository Structure
 
-| Theory Section | Claims | Derivation Support |
-|---------------|--------|-------------------|
-| §2: Pre-Quantum Foundations | Admissibility algorithm | D01 |
-| §3: Logical Strain | Weight ratios from scale invariance | D05 |
-| §4: Graphs to Vector Spaces | Complex necessity | D02 |
-| §5: Quantum Structure | Operators and unitarity | D03 |
-| §6: Dynamics & Measurement | Born rule uniqueness | D04 |
-| §7: Gauge Fields | U(1)×SU(2)×SU(3) emergence | D03 |
-| §8: Experimental Tests | Predictions and protocols | D06 |
+```
+LFT_GEN_19_LEAN/
+├── LFT/
+│   ├── Core/                          # Lean 4 implementations
+│   │   ├── D01_Admissibility.lean     # Graph admissibility algorithm
+│   │   ├── D02_ComplexNecessity.lean  # Complex numbers proof
+│   │   ├── D03_UnitaryEvolution.lean  # Standard Model derivation
+│   │   ├── D04_BornRule.lean          # Born rule uniqueness
+│   │   └── D05_StrainWeights.lean     # Scale invariance
+│   └── 00-lean-build-plan.md          # Build roadmap
+├── docs/
+│   ├── derivations-v5/                # Mathematical proofs
+│   │   ├── D00-derivations-mapping.md
+│   │   ├── D01-foundations.md
+│   │   ├── D02-complex-necessity.md
+│   │   ├── D03-unitary-evolution.md
+│   │   ├── D04-born-rule-proof.md
+│   │   ├── D05-strain-weights.md
+│   │   └── D06-predictions.md
+│   ├── predictions/                    # Experimental protocols
+│   │   └── D06_predictions.md
+│   ├── position-papers/               # Historical papers
+│   ├── sessions/                      # Development notes
+│   │   └── LFT_GEN_19_Session_1.md
+│   └── theory-v5/                     # Theory exposition
+│       ├── 00-glossary.md
+│       ├── 01-introduction.md
+│       ├── 02-pre-quantum-foundations.md
+│       ├── 03-logical-strain.md
+│       ├── 04-graphs-to-vector-spaces.md
+│       ├── 05-quantum-structure.md
+│       ├── 06-dynamics-and-measurement.md
+│       ├── 07-symmetries-and-gauge-fields.md
+│       └── 08-conclusion.md
+├── lean-map/                          # Lean implementation mapping
+├── .lake/                             # Build artifacts
+├── lakefile.toml                      # Lake configuration
+├── lean-toolchain                     # Lean version specification
+└── README.md                          # This file
+```
 
-## 📈 Key Equations Proven
+## Quick Start
 
-1. **Core Identity:** 𝒜 = ℒ(𝒮)
-2. **Strain Functional:** D(ψ) = w_I v_I + w_N v_N + w_E v_E
-3. **Born Rule:** P(k|ψ) = |c_k|²
-4. **Decoherence Time:** τ_D = τ₀(ξ/ℓ₀)²/Γ_env
-5. **Complex Structure:** J² = -I (orientation generator)
+### Prerequisites
+- [Lean 4](https://leanprover.github.io/) (v4.21.0)
+- [VS Code](https://code.visualstudio.com/) with Lean 4 extension
 
-## 🚀 Implementation Progress
+### Building
 
-### Completed in Lean 4
-- [x] D01: Admissibility checker with O(V³) complexity
-- [x] D02: Complex necessity theorem
+```bash
+# Clone repository
+git clone https://github.com/[username]/LFT_GEN_19_LEAN.git
+cd LFT_GEN_19_LEAN
 
-### Next Priority
-- [ ] D04: Born rule uniqueness proof
-- [ ] D03: Unitary evolution from coherence
+# Build all modules
+lake build
 
-### Future Work
-- [ ] D05: Scale invariance derivation
-- [ ] D06: Prediction calculations
+# Test individual modules
+lean LFT/Core/D01_Admissibility.lean
+lean LFT/Core/D02_ComplexNecessity.lean
+lean LFT/Core/D03_UnitaryEvolution.lean
+lean LFT/Core/D04_BornRule.lean
+lean LFT/Core/D05_StrainWeights.lean
+```
 
-## 📝 How to Use These Derivations
+## Critical Experimental Test
 
-1. **For Theory Understanding:** Read D00 first for the overview
-2. **For Implementation:** Start with D01 (algorithms) and D02 (complex numbers)
-3. **For Physics:** Focus on D03 (dynamics) and D04 (measurement)
-4. **For Experiments:** See D06 for testable predictions
+**Decoherence Scaling**: The theory predicts τ_D ∝ (ξ/ℓ₀)² (positive slope) while standard QM predicts τ_D ∝ 1/size (negative slope). This opposite behavior provides a decisive experimental test.
 
-## 🔬 Validation
+See [D06 Predictions](docs/predictions/D06_predictions.md) for detailed experimental protocols.
 
-Each derivation includes:
-- Formal mathematical proofs
-- Connection to physical interpretation
-- Comparison with standard approaches
-- Falsifiable predictions where applicable
+## Documentation
 
-## 📚 Citations
+- **[Theory Overview](docs/theory-v5/)** - Complete conceptual framework
+- **[Mathematical Derivations](docs/derivations-v5/)** - Rigorous proofs
+- **[Experimental Predictions](docs/predictions/D06_predictions.md)** - Testable outcomes
+- **[Build Plan](LFT/00-lean-build-plan.md)** - Implementation roadmap
 
-When using these derivations, please cite:
+## Author
 
-Logic Field Theory: Deriving Quantum Mechanics from the Three Fundamental Laws of Logic
->James D. Longmire
->Northrop Grumman Fellow (unaffiliated research)
->ORCID: 0009-0009-1383-7698
+**James D. Longmire**  
+Northrop Grumman Fellow (independent research)  
+Email: longmire.jd@gmail.com  
+ORCID: [0009-0009-1383-7698](https://orcid.org/0009-0009-1383-7698)
 
-## ⚡ Quick Reference
+## Citation
 
-**Most Important Results:**
-1. **D02, Theorem D2.7:** Complex numbers are necessary (not postulated)
-2. **D04, Theorem D4.4:** Born rule P = |ψ|² is unique
-3. **D03, Theorem D3.6:** U(1)×SU(2)×SU(3) is minimal and sufficient
-4. **D05, Theorem D5.2:** Strain weights from scale invariance
+```bibtex
+@software{longmire2025lft,
+  author = {Longmire, James D.},
+  title = {Logic Field Theory: Quantum Mechanics from First Principles},
+  year = {2025},
+  url = {https://github.com/[username]/LFT_GEN_19_LEAN}
+}
+```
 
-**Key Physical Constants Derived:**
-- Fundamental logical length: ℓ₀ ≈ 1.6 × 10⁻³⁵ m
-- Coherence capacity: σ_critical (system-dependent)
-- Logical temperature: T_logical = σ_critical/k_logic
+## License
+
+- **Lean Code**: MIT License
+- **Theory & Documentation**: CC BY-NC-SA 4.0
+
+## Acknowledgments
+
+Lean 4 formalization developed with assistance from Claude (Anthropic).
 
 ---
 
-*These derivations form the mathematical backbone of Logic Field Theory, proving that quantum mechanics emerges necessarily from logical consistency rather than being postulated.*
+**Status**: ✅ Theory complete and verified | 🔬 Awaiting experimental validation
