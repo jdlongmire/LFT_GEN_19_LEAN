@@ -47,8 +47,6 @@ Mathematics doesn't exist independently—it emerges from the 3FLL. The Peano ax
 
 This hierarchy is crucial: The 3FLL are the absolute foundation. Mathematics is what emerges when we systematically explore their implications.
 
-## B. From Logic to Mathematics
-
 ## B. From the 3FLL to Mathematics: The First Emergence
 
 ### The Emergence of Mathematical Structure
@@ -89,8 +87,6 @@ Could mathematics be different? Only if the 3FLL could be different—which woul
 - Reduce to our mathematics under analysis  
 - Contain hidden contradictions
 - Are incomplete fragments of the full structure that emerges from the three laws
-
-## C. From Mathematics to Physics
 
 ## C. From Mathematics to Physics: The Complete Emergence
 
