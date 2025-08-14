@@ -1,7 +1,9 @@
 # The Logical Resolution Model: An Ontic-Logical Framework for Quantum Measurement
 
-**James D. Longmire**  
-*Independent Researcher*  
+> **James D. Longmire**
+> Northrop Grumman Fellow (unaffiliated research)  
+> ORCID: 0009-0009-1383-7698  
+> August 2025
 
 ---
 
