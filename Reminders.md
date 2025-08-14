@@ -1,0 +1,98 @@
+## Here’s the quick sequence to check if your **local** and **remote** repos are in sync:
+
+```bash
+# 1. Go to your repo folder
+cd /path/to/your/repo
+
+# 2. Make sure you’re on the right branch
+git branch
+
+# 3. Get the latest info from remote
+git fetch origin
+
+# 4. Compare your branch with remote
+git status
+git log --oneline origin/main..HEAD   # commits you have locally but not on remote
+git log --oneline HEAD..origin/main   # commits remote has but you don’t
+```
+
+If `git status` says:
+
+```
+Your branch is up to date with 'origin/main'
+```
+
+—then you’re synced.
+
+##To commit a single file:
+
+```bash
+git add path/to/file.txt
+git commit -m "Describe the change to file.txt"
+git push origin main
+```
+
+That stages **only that file**, commits it with your message, and pushes it to `main`.
+
+
+Do you want me to also give you the **fast “one-command” check-and-sync” version**?
+
+
+Here’s a **simple Git cheat sheet** with the essentials:
+
+### **Check Status**
+
+```bash
+git status
+```
+
+### **Stage & Commit Changes**
+
+```bash
+git add <file>      # stage a file
+git add .           # stage all changes
+git commit -m "message"
+```
+
+### **Push Changes**
+
+```bash
+git push origin <branch>
+```
+
+### **Pull Changes**
+
+```bash
+git pull origin <branch>
+```
+
+### **Create & Switch Branches**
+
+```bash
+git branch <branch>     # create branch
+git checkout <branch>   # switch branch
+git checkout -b <branch> # create & switch in one step
+```
+
+### **Merge Branches**
+
+```bash
+git checkout main
+git merge <branch>
+```
+
+### **View History**
+
+```bash
+git log --oneline --graph --all
+```
+
+### **Undo Changes**
+
+```bash
+git restore <file>      # discard changes
+git reset --soft HEAD~1 # undo last commit, keep changes staged
+git reset --hard HEAD~1 # undo last commit, discard changes
+```
+
+If you want, I can also give you a **one-page “everyday Git” reference** that’s printable.
