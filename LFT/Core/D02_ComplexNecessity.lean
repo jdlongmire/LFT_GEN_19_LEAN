@@ -100,14 +100,6 @@ theorem LFT_CORE_THEOREM :
     -- ℂ satisfies all requirements
     (qm_requirements complex_numbers) := by
   simp [real_numbers, quaternions, complex_numbers]
-  constructor
-  · -- Real numbers lack i
-    simp
-  constructor
-  · -- Quaternions are non-commutative
-    simp
-  · -- Complex numbers have everything
-    simp
 
 #check LFT_CORE_THEOREM
 #eval is_valid_for_qm complex_numbers  -- Should output: true
