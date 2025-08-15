@@ -1,4 +1,4 @@
-# Direct LFT Repository Reorganization
+# Direct LFT Repository Reorganization - FIXED VERSION
 # Run from: C:\Users\jdlon\Documents\LFT_GEN_19_LEAN
 
 # STEP 1: Confirm location and backup
@@ -107,6 +107,7 @@ if (Test-Path ".gitignore") {
 if (Test-Path "LICENSE") {
     Write-Host "  ✓ LICENSE stays in root" -ForegroundColor Green
 }
+
 if (Test-Path "LFT/00-lean-build-plan.md") {
     Move-Item -Path "LFT/00-lean-build-plan.md" -Destination "003-Lean_Proofs/Build_Plan.md" -Force
 }
@@ -174,7 +175,7 @@ foreach ($dir in $oldDirs) {
 # STEP 6: Create main README for new structure
 Write-Host "`n=== Creating updated README ===" -ForegroundColor Cyan
 
-@"
+$readmeContent = @'
 # Logic Field Theory
 
 **Deriving Quantum Mechanics from the Three Fundamental Laws of Logic**
@@ -215,7 +216,9 @@ The theory predicts decoherence time scales as τ_D ∝ (ξ/ℓ₀)² (positive 
 Northrop Grumman Fellow (independent research)  
 Email: longmire.jd@gmail.com  
 ORCID: [0009-0009-1383-7698](https://orcid.org/0009-0009-1383-7698)
-"@ | Out-File -FilePath "README.md" -Encoding UTF8
+'@
+
+$readmeContent | Out-File -FilePath "README.md" -Encoding UTF8
 
 # STEP 7: Show git status
 Write-Host "`n=== Git Status ===" -ForegroundColor Cyan
