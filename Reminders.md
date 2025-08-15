@@ -17,6 +17,12 @@ To commit a single file:
 git add path/to/file.txt
 git commit -m "Updated file"
 git push origin main
+
+or for the whole repo
+
+git add -A 
+git commit -m "Latest updates"
+git push origin main
 ```
 
 That stages **only that file**, commits it with your message, and pushes it to `main`.
