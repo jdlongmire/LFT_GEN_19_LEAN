@@ -136,7 +136,7 @@ If you use this work in your research, please cite:
   year = {2025},
   url = {https://github.com/jdlongmire/LFT}
 }
-
+```
 ## Collaboration
 
 Seeking collaborators in:
