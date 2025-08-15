@@ -18,18 +18,14 @@ git add path/to/file.txt
 git commit -m "Updated file"
 git push origin main
 
-or for the whole repo
+That stages **only that file**, commits it with your message, and pushes it to `main`.
+
+or - for the whole repo
 
 git add -A 
 git commit -m "Latest updates"
 git push origin main
 ```
-
-That stages **only that file**, commits it with your message, and pushes it to `main`.
-
-
-Do you want me to also give you the **fast “one-command” check-and-sync” version**?
-
 
 Here’s a **simple Git cheat sheet** with the essentials:
 
@@ -87,5 +83,3 @@ git restore <file>      # discard changes
 git reset --soft HEAD~1 # undo last commit, keep changes staged
 git reset --hard HEAD~1 # undo last commit, discard changes
 ```
-
-If you want, I can also give you a **one-page “everyday Git” reference** that’s printable.
