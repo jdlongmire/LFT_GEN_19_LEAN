@@ -5,7 +5,7 @@
 [![Lean 4](https://img.shields.io/badge/Lean-4.21.0-blue)](https://github.com/leanprover/lean4)
 [![License: MIT](https://img.shields.io/badge/Code-MIT-green.svg)](LICENSE)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/Theory-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE)
-
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16884443.svg)](https://doi.org/10.5281/zenodo.16884443)
 ## Overview
 
 Logic Field Theory (LFT) demonstrates that quantum mechanics emerges necessarily from the Three Fundamental Laws of Logic (Identity, Non-Contradiction, Excluded Middle). This repository contains the complete theoretical framework, mathematical derivations, and Lean 4 formal verification.
@@ -123,9 +123,11 @@ ORCID: [0009-0009-1383-7698](https://orcid.org/0009-0009-1383-7698)
 
 - Position paper: `001-Papers/Position_Papers/Logic_Field_Theory_Position_Paper.md`
 - arXiv submission: (pending)
-- Zenodo: [16788881](https://zenodo.org/uploads/16788881)
+- Zenodo: [16788881](https://doi.org/10.5281/zenodo.16884443)
 
 ## Citation
+
+If you use this work in your research, please cite:
 
 ```bibtex
 @software{longmire2025lft,
@@ -134,7 +136,6 @@ ORCID: [0009-0009-1383-7698](https://orcid.org/0009-0009-1383-7698)
   year = {2025},
   url = {https://github.com/jdlongmire/LFT}
 }
-```
 
 ## Collaboration
 
