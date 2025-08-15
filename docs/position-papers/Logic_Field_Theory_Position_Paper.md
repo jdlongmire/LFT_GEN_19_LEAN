@@ -79,7 +79,7 @@ The mathematical foundations of LFT have been rigorously formalized and machine-
 - Explains why electrons show quantum behavior (w_I/w_E ~ 10¹⁰⁰)
 - Predicts decoherence scaling τ_D ∝ (ξ/ℓ₀)²
 
-The formalization is actively being extended, with ongoing work to complete all proof details and derive additional Standard Model parameters from logical principles.
+The formalization is actively being extended, with ongoing work to complete all proof details and explore other derivations from logical principles.
 
 ---
 
@@ -98,7 +98,7 @@ The formalization is actively being extended, with ongoing work to complete all 
 
 ---
 
-## 6. LFT vs Many Worlds
+## 6. LFT vs Many Worlds Case Study
 
 ### 6.1 Direct Conflict
 MWI insists all branches of a superposition are physically real (Everett 1957).  
